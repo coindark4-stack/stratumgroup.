@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СТРАТУМ ГРУПП — Управление и реализация строительных проектов</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -741,6 +742,7 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .mobile-menu-button { display: block; }
             .hero h1 { font-size: 2rem; }
             .hero-subtitle { font-size: 1rem; }
 
@@ -749,7 +751,7 @@
             .contact-grid { grid-template-columns: 1fr; }
 
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .stat-number { font-size: 2.5rem; }
+            .stat-number { font-size: 2.5rem; white-space: nowrap; }
 
             .portfolio-grid { grid-template-columns: 1fr; }
 
@@ -776,9 +778,46 @@
             .pillars { gap: 30px; }
             .footer-contacts { flex-direction: column; gap: 15px; }
         }
+
+        /* Mobile menu styles */
+        .mobile-menu-button {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.6rem;
+            cursor: pointer;
+            padding: 8px 12px;
+        }
+
+        @media (max-width: 900px) {
+            nav { padding: 14px 4%; }
+            .mobile-menu-button { display: block; }
+            .nav-links {
+                display: flex;
+                position: fixed;
+                top: 64px;
+                right: 0;
+                width: 320px;
+                max-width: 80%;
+                height: calc(100% - 64px);
+                background: linear-gradient(180deg, rgba(17,29,50,0.98), rgba(10,22,40,0.98));
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 18px;
+                box-shadow: -20px 0 40px rgba(0,0,0,0.6);
+                transform: translateX(100%);
+                transition: transform 0.28s ease;
+                z-index: 1200;
+            }
+            .nav-links.open { transform: translateX(0); }
+            .nav-links li { list-style: none; }
+            .nav-links a { font-size: 1.05rem; padding: 10px 6px; display: block; }
+        }
     </style>
 </head>
 <body>
+
 
     <!-- Navigation -->
     <nav>
@@ -789,6 +828,7 @@
                 <span>ГРУПП</span>
             </div>
         </div>
+        <button class="mobile-menu-button" aria-label="Открыть меню">☰</button>
         <ul class="nav-links">
             <li><a href="#about">О нас</a></li>
             <li><a href="#stats">Опыт</a></li>
@@ -867,7 +907,7 @@
                 <div class="stat-desc">География проектов</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">250 000+</div>
+                <div class="stat-number">250&nbsp;000+</div>
                 <div class="stat-label">м²</div>
                 <div class="stat-desc">Общая площадь объектов</div>
             </div>
@@ -1113,7 +1153,7 @@
     <section class="approach">
         <div class="section-header">
             <p class="section-label">Наш подход</p>
-            <h2 class="section-title">Бескомпромиссный контроль на каждом этапе</h2>
+            <h2 class="section-title">Строгий контроль на каждом этапе</h2>
         </div>
 
         <div class="approach-grid">
@@ -1213,13 +1253,7 @@
 
         <div class="contact-grid">
             <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">🌐</div>
-                    <div class="contact-details">
-                        <h3>Сайт</h3>
-                        <a href="https://stratum-group.ru" target="_blank" rel="noopener noreferrer">stratum-group.ru</a>
-                    </div>
-                </div>
+                <!-- Секция 'Сайт' удалена -->
                 <div class="contact-item">
                     <div class="contact-icon">✉️</div>
                     <div class="contact-details">
@@ -1262,7 +1296,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2025 СТРАТУМ ГРУПП. Все права защищены.</p>
+                <p>© 2026 СТРАТУМ ГРУПП. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -1338,6 +1372,26 @@
 
         const statsSection = document.querySelector('.stats');
         if (statsSection) statsObserver.observe(statsSection);
+    </script>
+
+    <script>
+        (function() {
+            const btn = document.querySelector('.mobile-menu-button');
+            const navLinks = document.querySelector('.nav-links');
+            if (!btn || !navLinks) return;
+
+            btn.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => navLinks.classList.remove('open'));
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 900) navLinks.classList.remove('open');
+            });
+        })();
     </script>
 
 </body>
