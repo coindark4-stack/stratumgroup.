@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТРАТУМ ГРУПП — Управление и реализация строительных проектов</title>
+    <meta name="description" content="СТРАТУМ ГРУПП — управляющая строительная компания. Полный цикл реализации строительных проектов: управление, контроль бюджета и сроков, координация подрядчиков, технический и финансовый надзор.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a1628">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="canonical" href="https://stratum-group.ru/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="СТРАТУМ ГРУПП">
+    <meta property="og:title" content="СТРАТУМ ГРУПП — Управление и реализация строительных проектов">
+    <meta property="og:description" content="Управляющая строительная компания. Полный цикл реализации проектов: от идеи до ввода в эксплуатацию.">
+    <meta property="og:url" content="https://stratum-group.ru/">
+    <meta property="og:image" content="https://stratum-group.ru/images/logo.png">
+    <meta property="og:image:alt" content="Логотип СТРАТУМ ГРУПП">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="СТРАТУМ ГРУПП — Управление и реализация строительных проектов">
+    <meta name="twitter:description" content="Полный цикл реализации строительных проектов: управление, контроль, результат.">
+    <meta name="twitter:image" content="https://stratum-group.ru/images/logo.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "СТРАТУМ ГРУПП",
+      "url": "https://stratum-group.ru/",
+      "logo": "https://stratum-group.ru/images/logo.png",
+      "email": "info@stratum-group.ru",
+      "telephone": "+7-495-518-89-39"
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --dark-blue: #0a1628;
+            --navy: #111d32;
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --white: #ffffff;
+            --gray: #8b9cb5;
+            --light-gray: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 50px; width: auto; }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--white);
+        }
+        .logo-text span {
+            color: var(--gold);
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 120px 5% 80px;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--navy) 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(212,175,55,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content { text-align: center; max-width: 900px; position: relative; z-index: 1; }
+
+        .hero-logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .hero-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(212, 175, 55, 0.3));
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--dark-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        .cta-button:hover::before { left: 100%; }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Section Styles */
+        section { padding: 100px 5%; position: relative; }
+
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-label {
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        /* About Section */
+        .about { background: var(--navy); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 40px 30px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        .about-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .about-card:hover::before { transform: scaleX(1); }
+        .about-card h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 15px; font-weight: 600; }
+        .about-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.8; }
+
+        .mission-statement {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+            border-left: 3px solid var(--gold);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .mission-statement p { font-size: 1.3rem; font-style: italic; color: var(--white); font-weight: 300; }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--navy) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        .stat-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+        }
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 15px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--white);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .stat-desc { font-size: 0.9rem; color: var(--gray); margin-top: 10px; }
+
+        /* Benefits Section */
+        .benefits { background: var(--dark-blue); }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 30px;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s;
+        }
+        .benefit-item:hover { background: rgba(212, 175, 55, 0.1); transform: translateX(10px); }
+        .benefit-icon {
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+        .benefit-content h3 { color: var(--white); margin-bottom: 10px; font-size: 1.1rem; }
+        .benefit-content p { color: var(--gray); font-size: 0.9rem; }
+
+        /* Services Section */
+        .services { background: linear-gradient(180deg, var(--navy) 0%, var(--dark-blue) 100%); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            padding: 50px 40px;
+            text-align: center;
+            border-radius: 15px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.1) 100%);
+            transition: height 0.3s;
+        }
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        .service-card:hover::after { height: 100%; }
+        .service-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(212, 175, 55, 0.2);
+            position: absolute;
+            top: 20px; right: 30px;
+        }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--white); position: relative; z-index: 1; }
+        .service-card p { color: var(--gray); font-size: 0.95rem; position: relative; z-index: 1; }
+
+        /* Portfolio Section */
+        .portfolio { background: var(--navy); }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .portfolio-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--gold);
+        }
+        .portfolio-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .portfolio-location {
+            color: var(--gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .portfolio-title {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .portfolio-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .portfolio-works { border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 15px; }
+        .portfolio-works-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .portfolio-works-list { color: var(--gray); font-size: 0.9rem; line-height: 1.5; }
+        .portfolio-highlight {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* Process Section */
+        .process { background: var(--dark-blue); }
+        .process-steps { max-width: 1000px; margin: 0 auto; position: relative; }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+        }
+        .step { display: flex; align-items: center; margin-bottom: 50px; position: relative; }
+        .step:nth-child(even) { flex-direction: row-reverse; }
+        .step-content {
+            width: 45%;
+            padding: 30px;
+            background: rgba(17, 29, 50, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            position: relative;
+        }
+        .step:nth-child(odd) .step-content { margin-right: auto; text-align: right; }
+        .step:nth-child(even) .step-content { margin-left: auto; text-align: left; }
+        .step-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.5rem;
+            color: var(--dark-blue);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            z-index: 2;
+        }
+        .step h3 { color: var(--gold); margin-bottom: 10px; font-size: 1.3rem; }
+        .step p { color: var(--gray); font-size: 0.95rem; }
+        .process-note {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--gray);
+            font-style: italic;
+            padding: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* Approach Section */
+        .approach { background: var(--navy); }
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: stretch;
+        }
+        .approach-card {
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+            border-left: 4px solid var(--gold);
+            position: relative;
+            min-height: 220px;
+        }
+        .approach-card h3 {
+            color: var(--white);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .approach-card h3::before {
+            content: '▸';
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+        .approach-card p { color: var(--gray); line-height: 1.8; }
+
+        @media (max-width: 1100px) {
+            .approach-grid { grid-template-columns: repeat(2, 1fr); max-width: 1000px; }
+        }
+        @media (max-width: 600px) {
+            .approach-grid { grid-template-columns: 1fr; max-width: 600px; }
+        }
+
+        /* Why Us Section */
+        .why-us { background: var(--dark-blue); position: relative; overflow: hidden; }
+        .why-us::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+        }
+        .feature { display: flex; gap: 20px; align-items: flex-start; }
+        .feature-icon {
+            width: 60px; height: 60px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        .feature-content h3 { color: var(--gold); margin-bottom: 10px; font-size: 1.2rem; }
+        .feature-content p { color: var(--gray); font-size: 0.95rem; line-height: 1.7; }
+
+        .quote-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(17, 29, 50, 0.8) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            padding: 50px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            position: relative;
+        }
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 6rem;
+            color: rgba(212, 175, 55, 0.2);
+            font-family: serif;
+            line-height: 1;
+        }
+        .quote-box p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--white);
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Goal Section */
+        .goal { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%); text-align: center; }
+        .goal-text {
+            font-size: 1.8rem;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: var(--white);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .pillars { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; }
+        .pillar { text-align: center; position: relative; }
+        .pillar-number {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            transition: transform 0.3s;
+        }
+        .pillar:hover .pillar-number { transform: scale(1.1) rotate(5deg); }
+        .pillar h3 { color: var(--white); font-size: 1.3rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Contact Section */
+        .contact-section { background: var(--dark-blue); padding: 100px 5%; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .contact-info { display: flex; flex-direction: column; gap: 30px; }
+        .contact-item {
+            display: flex; align-items: center; gap: 20px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .contact-item:hover {
+            border-color: var(--gold);
+            transform: translateX(10px);
+            background: rgba(212, 175, 55, 0.05);
+        }
+        .contact-icon {
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+            color: var(--dark-blue);
+            flex-shrink: 0;
+        }
+        .contact-details h3 {
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .contact-details a, .contact-details p {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .contact-details a:hover { color: var(--gold); }
+
+        .contact-logo { display: flex; justify-content: center; align-items: center; }
+        .contact-logo img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            opacity: 0.95;
+            filter: drop-shadow(0 20px 40px rgba(212, 175, 55, 0.25));
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 60px 5% 30px;
+            text-align: center;
+        }
+        .footer-content { max-width: 800px; margin: 0 auto; }
+        .footer-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .footer-tagline {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .footer-contact-item { color: var(--gray); font-size: 1rem; }
+        .footer-contact-item a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .footer-contact-item a:hover { color: var(--gold); }
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding-top: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-button { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .hero-subtitle { font-size: 1rem; }
+
+            .services-grid,
+            .features-grid,
+            .contact-grid { grid-template-columns: 1fr; }
+
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .stat-number { font-size: 2.5rem; white-space: nowrap; }
+
+            .portfolio-grid { grid-template-columns: 1fr; }
+
+            .contact-logo { order: -1; }
+            .contact-logo img { width: 200px; height: 200px; }
+
+            .process-steps::before { left: 30px; }
+
+            .step,
+            .step:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 80px;
+            }
+            .step-content,
+            .step:nth-child(odd) .step-content,
+            .step:nth-child(even) .step-content {
+                width: 100%;
+                text-align: left;
+                margin: 0;
+            }
+            .step-number { left: 0; transform: none; }
+
+            .pillars { gap: 30px; }
+            .footer-contacts { flex-direction: column; gap: 15px; }
+        }
+
+        /* Mobile menu styles */
+        .mobile-menu-button {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.6rem;
+            cursor: pointer;
+            padding: 8px 12px;
+        }
+
+        @media (max-width: 900px) {
+            nav { padding: 14px 4%; }
+            .mobile-menu-button { display: block; }
+            .nav-links {
+                display: flex;
+                position: fixed;
+                top: 64px;
+                right: 0;
+                width: 320px;
+                max-width: 80%;
+                height: calc(100% - 64px);
+                background: linear-gradient(180deg, rgba(17,29,50,0.98), rgba(10,22,40,0.98));
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 18px;
+                box-shadow: -20px 0 40px rgba(0,0,0,0.6);
+                transform: translateX(100%);
+                transition: transform 0.28s ease;
+                z-index: 1200;
+            }
+            .nav-links.open { transform: translateX(0); }
+            .nav-links li { list-style: none; }
+            .nav-links a { font-size: 1.05rem; padding: 10px 6px; display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="images/logo-icon.png" alt="СТРАТУМ ГРУПП">
+            <div class="logo-text">
+                СТРАТУМ
+                <span>ГРУПП</span>
+            </div>
+        </div>
+        <button class="mobile-menu-button" aria-label="Открыть меню">☰</button>
+        <ul class="nav-links">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#stats">Опыт</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Проекты</a></li>
+            <li><a href="#process">Как работаем</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="images/logo-icon.png" alt="СТРАТУМ ГРУПП">
+            </div>
+            <h1>СТРАТУМ ГРУПП</h1>
+            <p class="hero-subtitle">Управление и реализация строительных проектов</p>
+            <p class="hero-tagline">Система. Контроль. Результат.</p>
+            <a href="#contact" class="cta-button">Обсудить проект</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <p class="section-label">Кто мы</p>
+            <h2 class="section-title">СТРАТУМ ГРУПП — управляющая строительная компания</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Полный цикл</h3>
+                <p>Обеспечиваем реализацию проектов от идеи до ввода в эксплуатацию.</p>
+            </div>
+            <div class="about-card">
+                <h3>Контроль бюджета и сроков</h3>
+                <p>Строгое соблюдение финансовых и временных рамок проекта.</p>
+            </div>
+            <div class="about-card">
+                <h3>Координация подрядчиков</h3>
+                <p>Эффективное управление всеми участниками строительного процесса.</p>
+            </div>
+            <div class="about-card">
+                <h3>Технический и финансовый надзор</h3>
+                <p>Гарантия качества и прозрачности всех этапов строительства.</p>
+            </div>
+        </div>
+
+        <div class="mission-statement">
+            <p>Наша задача — чтобы объект был сдан вовремя и без потери качества.</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="section-header">
+            <p class="section-label">Опыт и масштаб</p>
+            <h2 class="section-title">Мы подтверждаем компетенции цифрами</h2>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">80</div>
+                <div class="stat-label">Объектов</div>
+                <div class="stat-desc">Успешно реализовано</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">9</div>
+                <div class="stat-label">Лет</div>
+                <div class="stat-desc">Опыта работы</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Регионов</div>
+                <div class="stat-desc">География проектов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">250&nbsp;000+</div>
+                <div class="stat-label">м²</div>
+                <div class="stat-desc">Общая площадь объектов</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="section-header">
+            <p class="section-label">Что получает заказчик</p>
+            <h2 class="section-title">Мы берём на себя управление процессом</h2>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">₽</div>
+                <div class="benefit-content">
+                    <h3>Фиксированный бюджет</h3>
+                    <p>Чёткое соблюдение сметы без скрытых платежей</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-content">
+                    <h3>Контроль всех этапов</h3>
+                    <p>Полный мониторинг строительного процесса</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-content">
+                    <h3>Минимизация рисков</h3>
+                    <p>Профессиональное управление рисками</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">📊</div>
+                <div class="benefit-content">
+                    <h3>Прозрачная отчётность</h3>
+                    <p>Регулярная детальная отчётность</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">👤</div>
+                <div class="benefit-content">
+                    <h3>Персональный руководитель</h3>
+                    <p>Выделенный менеджер для вашего проекта</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">⏱</div>
+                <div class="benefit-content">
+                    <h3>Соблюдение сроков</h3>
+                    <p>Гарантия своевременной сдачи объекта</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <p class="section-label">Наши направления</p>
+            <h2 class="section-title">Комплексные решения в строительстве</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-number">01</span>
+                <h3>Генеральный подряд</h3>
+                <p>Полный комплекс строительно-монтажных работ под ключ</p>
+            </div>
+            <div class="service-card">
+                <span class="service-number">02</span>
+                <h3>Управление строительными проектами</h3>
+                <p>Профессиональный консалтинг и управление проектами</p>
+            </div>
+            <div class="service-card">
+                <span class="service-number">03</span>
+                <h3>Инженерные сети</h3>
+                <p>Проектирование и монтаж инженерных коммуникаций</p>
+            </div>
+            <div class="service-card">
+                <span class="service-number">04</span>
+                <h3>Капитальное строительство</h3>
+                <p>Строительство зданий и сооружений любой сложности</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <p class="section-label">Портфолио</p>
+            <h2 class="section-title">Реализованные проекты</h2>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="images/monetka.jpg" alt="Березовский, ТЦ Монетка" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-location">Березовский</div>
+                    <h3 class="portfolio-title">ТЦ «Монетка»</h3>
+                    <p class="portfolio-desc">Коммерческая недвижимость с жёсткими сроками ввода объекта в эксплуатацию.</p>
+                    <div class="portfolio-works">
+                        <div class="portfolio-works-label">Выполненные работы:</div>
+                        <div class="portfolio-works-list">Монолитные работы, Устройство несущих конструкций</div>
+                    </div>
+                    <span class="portfolio-highlight">Жёсткие сроки</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/moscow-city.jpg" alt="Москва-Сити, Башня Город Столиц" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-location">Москва-Сити</div>
+                    <h3 class="portfolio-title">Башня «Город Столиц»</h3>
+                    <p class="portfolio-desc">Объект высокой категории сложности. Работы выполнены в условиях действующего комплекса.</p>
+                    <div class="portfolio-works">
+                        <div class="portfolio-works-label">Выполненные работы:</div>
+                        <div class="portfolio-works-list">Монолитные конструкции, Внутренние строительные работы</div>
+                    </div>
+                    <span class="portfolio-highlight">Высокая сложность</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/lenta-noyabrsk.jpg" alt="Ноябрьск, ТЦ Лента" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-location">Ноябрьск</div>
+                    <h3 class="portfolio-title">ТЦ «Лента»</h3>
+                    <p class="portfolio-desc">Строительство в северном регионе с соблюдением графика в сложных климатических условиях.</p>
+                    <div class="portfolio-works">
+                        <div class="portfolio-works-label">Выполненные работы:</div>
+                        <div class="portfolio-works-list">Монолитные работы, Устройство железобетонных конструкций</div>
+                    </div>
+                    <span class="portfolio-highlight">Северный регион</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/lenta-tagil.jpg" alt="Нижний Тагил" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-location">Нижний Тагил</div>
+                    <h3 class="portfolio-title">Реконструкция цеха №135</h3>
+                    <p class="portfolio-desc">Работы выполнены без остановки производственного процесса.</p>
+                    <div class="portfolio-works">
+                        <div class="portfolio-works-label">Выполненные работы:</div>
+                        <div class="portfolio-works-list">Реконструкция, усиление конструкций, СМР</div>
+                    </div>
+                    <span class="portfolio-highlight">Без остановки производства</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/sima-land.jpg" alt="Екатеринбург, ТЦ Сима-Ленд" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-location">Екатеринбург</div>
+                    <h3 class="portfolio-title">ТЦ «Сима-Ленд»</h3>
+                    <p class="portfolio-desc">Масштабный коммерческий объект с высокой интенсивностью строительства.</p>
+                    <div class="portfolio-works">
+                        <div class="portfolio-works-label">Выполненные работы:</div>
+                        <div class="portfolio-works-list">Монолитные работы, Устройство железобетонного каркаса</div>
+                    </div>
+                    <span class="portfolio-highlight">Высокая интенсивность</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="images/zilart.jpg" alt="Москва, ЖК Зиларт" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-location">Москва</div>
+                    <h3 class="portfolio-title">ЖК «Зиларт»</h3>
+                    <p class="portfolio-desc">Масштабный девелоперский проект федерального уровня.</p>
+                    <div class="portfolio-works">
+                        <div class="portfolio-works-label">Выполненные работы:</div>
+                        <div class="portfolio-works-list">Гидроизоляционные работы, Монолитные конструкции, Отделочные работы</div>
+                    </div>
+                    <span class="portfolio-highlight">Масштабный проект</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="section-header">
+            <p class="section-label">Как мы работаем</p>
+            <h2 class="section-title">6 шагов к успешной реализации проекта</h2>
+        </div>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Анализ проекта</h3>
+                    <p>Глубокое изучение документации, целей и технических требований заказчика.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Бюджет</h3>
+                    <p>Формирование детальной сметы и расчёт необходимых инвестиций.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Планирование</h3>
+                    <p>Разработка подробного графика производства работ и контрольных точек.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3>Подбор подрядчиков</h3>
+                    <p>Выбор надёжных исполнителей на основе тендеров и квалификации.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <h3>Контроль</h3>
+                    <p>Ежедневный мониторинг исполнения, качества материалов и соблюдения сроков.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">06</div>
+                <div class="step-content">
+                    <h3>Сдача объекта</h3>
+                    <p>Финальная проверка, оформление документации и передача объекта заказчику.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-note">
+            Каждый этап фиксируется документально и подтверждается отчётностью.
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach">
+        <div class="section-header">
+            <p class="section-label">Наш подход</p>
+            <h2 class="section-title">Строгий контроль на каждом этапе</h2>
+        </div>
+
+        <div class="approach-grid">
+            <div class="approach-card">
+                <h3>Жёсткий контроль сметы</h3>
+                <p>Предотвращение необоснованных трат и строгое соблюдение финансового плана.</p>
+            </div>
+            <div class="approach-card">
+                <h3>Контроль качества материалов</h3>
+                <p>Проверка сертификатов и лабораторные испытания каждой партии продукции.</p>
+            </div>
+            <div class="approach-card">
+                <h3>Фото- и видеофиксация</h3>
+                <p>Цифровой мониторинг скрытых работ и ежедневный отчёт о прогрессе.</p>
+            </div>
+            <div class="approach-card">
+                <h3>Финансовая дисциплина</h3>
+                <p>Прозрачность всех транзакций и регулярная отчётность перед заказчиком.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="section-header">
+            <p class="section-label">Почему СТРАТУМ ГРУПП</p>
+            <h2 class="section-title">Наши ключевые преимущества и ценности</h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">⚙️</div>
+                <div class="feature-content">
+                    <h3>Системный подход</h3>
+                    <p>Интеграция всех строительных процессов в единую, управляемую структуру для достижения максимальной эффективности.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-content">
+                    <h3>Управление, а не просто работа</h3>
+                    <p>Мы берём на себя стратегическое планирование и контроль, освобождая заказчика от операционной рутины.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-content">
+                    <h3>Ответственность за результат</h3>
+                    <p>Полная финансовая и юридическая ответственность за соблюдение сроков, бюджета и качества объекта.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📋</div>
+                <div class="feature-content">
+                    <h3>Прозрачные условия</h3>
+                    <p>Честные договорные отношения, отсутствие скрытых платежей и регулярная детальная отчётность перед заказчиком.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p>Мы строим так, чтобы заказчик не возвращался к проблемам</p>
+        </div>
+    </section>
+
+    <!-- Goal Section -->
+    <section class="goal">
+        <div class="section-header">
+            <p class="section-label">Наша цель</p>
+            <h2 class="section-title">Создавать объекты, которые соответствуют ожиданиям</h2>
+        </div>
+
+        <p class="goal-text">Создавать объекты, которые соответствуют бюджету, срокам и ожиданиям заказчика.</p>
+
+        <div class="pillars">
+            <div class="pillar">
+                <div class="pillar-number">01</div>
+                <h3>Бюджет</h3>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">02</div>
+                <h3>Сроки</h3>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">03</div>
+                <h3>Ожидания</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <p class="section-label">Контакты</p>
+            <h2 class="section-title">Свяжитесь с нами</h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <a href="mailto:info@stratum-group.ru">info@stratum-group.ru</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h3>Телефон</h3>
+                        <a href="tel:+74955188939">+7 (495) 518-89-39</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-logo">
+                <img src="images/logo-icon.png" alt="СТРАТУМ ГРУПП">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo-icon.png" alt="СТРАТУМ ГРУПП">
+            </div>
+            <p class="footer-tagline">СТРАТУМ ГРУПП — ВАШ НАДЁЖНЫЙ ПАРТНЁР</p>
+
+            <div class="footer-contacts">
+                <div class="footer-contact-item">
+                    <a href="https://stratum-group.ru" target="_blank" rel="noopener noreferrer">stratum-group.ru</a>
+                </div>
+                <div class="footer-contact-item">
+                    <a href="mailto:info@stratum-group.ru">info@stratum-group.ru</a>
+                </div>
+                <div class="footer-contact-item">
+                    <a href="tel:+74955188939">+7 (495) 518-89-39</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 СТРАТУМ ГРУПП. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.about-card, .benefit-item, .service-card, .step, .approach-card, .feature, .contact-item, .stat-item, .portfolio-card').forEach(el => {
+            if (el) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            }
+        });
+
+        // Counter animation for stats
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                statNumbers.forEach(stat => {
+                    const original = stat.textContent.trim();
+                    const hasPlus = original.includes('+');
+                    const num = parseInt(original.replace(/\D/g, ''), 10);
+
+                    if (Number.isNaN(num)) return;
+
+                    let current = 0;
+                    const increment = Math.max(1, Math.floor(num / 50));
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= num) {
+                            stat.innerHTML = original;
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = current.toLocaleString('ru-RU') + (hasPlus ? '+' : '');
+                        }
+                    }, 30);
+                });
+
+                statsObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) statsObserver.observe(statsSection);
+    </script>
+
+    <script>
+        (function() {
+            const btn = document.querySelector('.mobile-menu-button');
+            const navLinks = document.querySelector('.nav-links');
+            if (!btn || !navLinks) return;
+
+            btn.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => navLinks.classList.remove('open'));
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 900) navLinks.classList.remove('open');
+            });
+        })();
+    </script>
+
+</body>
+</html>
