@@ -1,0 +1,29 @@
+{
+  "name": "stratumgroup",
+  "version": "1.0.0",
+  "description": "STRATUMGRUPP - Construction Project Management and Execution",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static HTML site - no build required'",
+    "lint": "echo 'No linter configured'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coindark4-stack/stratumgroup..git"
+  },
+  "keywords": [
+    "construction",
+    "project-management",
+    "stratum-group"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coindark4-stack/stratumgroup./issues"
+  },
+  "homepage": "https://github.com/coindark4-stack/stratumgroup.#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
